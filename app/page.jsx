@@ -26,9 +26,14 @@ export default function Home() {
             <div className="eyebrow">Testing · Automation · Commissioning</div>
             <h1>Testing, automation and commissioning for power and oil &amp; gas</h1>
             <p>
-              For more than 30 years we have supplied equipment from OMICRON, Rockwell Automation,
-              Schneider Electric and DILO, and the engineers who test, commission and train on it,
-              from Cairo and Bratislava.
+              <span className="only-desktop">
+                For more than 30 years we have supplied equipment from OMICRON, Rockwell Automation,
+                Schneider Electric and DILO, and the engineers who test, commission and train on it,
+                from Cairo and Bratislava.
+              </span>
+              <span className="only-mobile">
+                30+ years of test equipment, automation and the engineers behind them.
+              </span>
             </p>
             <div className="hero-actions">
               <Link href="/solutions/" className="btn btn--accent">
@@ -68,7 +73,7 @@ export default function Home() {
       <section className="partners" aria-label="Partner brands">
         <div className="container">
           <div className="partners-label">Authorised distributor and service partner for</div>
-          <div className="logo-row">
+          <div className="logo-row swipe">
             {partners.map((p) => (
               <span className="wordmark" key={p}>
                 {p}
@@ -122,7 +127,7 @@ export default function Home() {
                 <p>{s.short}</p>
                 <Link
                   className="link-arrow"
-                  href={s.id === "training" ? "/training/" : `/solutions/#${s.id}`}
+                  href={s.id === "training" ? "/training/" : `/solutions/${s.id}/`}
                 >
                   {s.id === "training" ? "See training courses" : `Explore ${s.title.toLowerCase()}`} →
                 </Link>
@@ -164,13 +169,14 @@ export default function Home() {
             <div className="eyebrow">Our clients</div>
             <h2>Working with the region's leading operators</h2>
           </div>
-          <div className="client-grid">
+          <div className="client-grid swipe">
             {featuredClients.map((c) => (
               <div className="client-tile" key={c}>
                 {c}
               </div>
             ))}
           </div>
+          <p className="swipe-hint">Swipe to see more</p>
           <p className="center mt-l">
             <Link className="link-arrow" href="/about/#clients">
               View all clients →

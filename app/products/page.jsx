@@ -35,10 +35,11 @@ export default function Products() {
             </ul>
             <div className="grid grid-3">
               {group.families.map((f) => (
-                <article className="product" key={f.name}>
+                <Link className="product" key={f.slug} href={`/products/${f.slug}/`} style={{ textDecoration: "none", color: "inherit" }}>
                   <h3>{f.name}</h3>
                   <p>{f.text}</p>
-                </article>
+                  <span className="link-arrow" style={{ display: "inline-block", marginTop: 12 }}>Details →</span>
+                </Link>
               ))}
             </div>
             <p className="mt-l">

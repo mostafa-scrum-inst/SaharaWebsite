@@ -20,17 +20,17 @@ export default function Footer() {
           </p>
         </div>
         <div>
-          <h4>Solutions</h4>
+          <p className="footer-title">Solutions</p>
           <ul>
-            <li><Link href="/solutions/#automation">Automation &amp; SCADA</Link></li>
-            <li><Link href="/solutions/#power">Power testing</Link></li>
+            <li><Link href="/solutions/automation/">Automation &amp; SCADA</Link></li>
+            <li><Link href="/solutions/power/">Power testing</Link></li>
             <li><Link href="/products/">Products</Link></li>
             <li><Link href="/training/">Training</Link></li>
             <li><Link href="/industries/">Industries</Link></li>
           </ul>
         </div>
         <div>
-          <h4>Company</h4>
+          <p className="footer-title">Company</p>
           <ul>
             <li><Link href="/about/">About us</Link></li>
             <li><Link href="/projects/">Projects</Link></li>
@@ -40,7 +40,7 @@ export default function Footer() {
           </ul>
         </div>
         <div>
-          <h4>Offices</h4>
+          <p className="footer-title">Offices</p>
           <ul>
             {company.offices.map((o) => (
               <li key={o.id}>

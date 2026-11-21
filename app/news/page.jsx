@@ -27,7 +27,7 @@ export default function News() {
             <article className="card news-card" key={n.title}>
               <span className="tag">{n.tag}</span>
               <time dateTime={n.date}>{fmt(n.date)}</time>
-              <h3 style={{ marginTop: 8 }}>{n.title}</h3>
+              <h2 className="h3" style={{ marginTop: 8 }}>{n.title}</h2>
               <p className="mb-0">{n.text}</p>
             </article>
           ))}

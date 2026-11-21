@@ -1,64 +1,44 @@
 import Link from "next/link";
 import PageHero from "../../components/PageHero";
 import Icon from "../../components/Icon";
-import Media from "../../components/Media";
 import CtaBand from "../../components/CtaBand";
 import { solutions } from "../../lib/content";
 import { meta } from "../../lib/site";
 
 export const metadata = meta({
-  title: "Substation Testing, Commissioning & Automation Services in Egypt",
+  title: "Testing, Commissioning & Automation Solutions",
   description:
-    "Protection relay, transformer, CT and breaker testing, substation commissioning, and PLC/SCADA automation services by Sahara Group's own engineering teams.",
+    "Sahara Group's solutions: substation testing and commissioning, PLC and SCADA automation, and OMICRON certified training, delivered by in-house engineering teams.",
   path: "/solutions/",
 });
 
+const hrefs = { automation: "/solutions/automation/", power: "/solutions/power/", training: "/training/" };
+
 export default function Solutions() {
-  const [automation, power] = solutions;
   return (
     <>
       <PageHero
         eyebrow="Solutions & services"
-        title="Substation testing, commissioning and automation services"
-        intro="Two in-house engineering teams, each with its own dedicated tools: one for automation and control, one for power testing and commissioning."
+        title="Testing, commissioning and automation solutions"
+        intro="Two in-house engineering teams, each with its own dedicated tools, plus a certified training academy."
         crumbs={[{ label: "Solutions" }]}
       />
-
-      {[automation, power].map((s, i) => (
-        <section
-          key={s.id}
-          id={s.id}
-          className={`section anchor ${i % 2 ? "section--alt" : "section--white"}`}
-        >
-          <div className="container grid grid-2">
-            <div style={{ order: i % 2 ? 2 : 0 }}>
+      <section className="section section--alt">
+        <div className="container grid grid-3">
+          {solutions.map((s) => (
+            <article className="card" key={s.id}>
               <div className="card-icon">
                 <Icon name={s.icon} />
               </div>
-              <h2>{s.title}</h2>
-              <p className="lead">{s.intro}</p>
-              <ul className="checklist" style={{ margin: "24px 0 32px" }}>
-                {s.items.map((it) => (
-                  <li key={it}>{it}</li>
-                ))}
-              </ul>
-              <div className="hero-actions">
-                <Link href="/contact/#quote" className="btn btn--accent">
-                  Request {s.id === "power" ? "a test campaign" : "an automation quote"}{" "}
-                  <span className="arrow">→</span>
-                </Link>
-                <Link href={`/products/#${s.id}`} className="btn btn--ghost">
-                  See {s.id} products
-                </Link>
-              </div>
-            </div>
-            <Media
-              kind={s.id === "power" ? "substation" : "panel"}
-              caption={s.id === "power" ? "Testing with OMICRON equipment" : "Control panel integration"}
-            />
-          </div>
-        </section>
-      ))}
+              <h2 className="h3">{s.title}</h2>
+              <p>{s.intro}</p>
+              <Link className="link-arrow" href={hrefs[s.id]}>
+                {s.id === "training" ? "See training courses" : `Explore ${s.title.toLowerCase()}`} →
+              </Link>
+            </article>
+          ))}
+        </div>
+      </section>
 
       <section className="section section--white">
         <div className="container">
@@ -84,7 +64,6 @@ export default function Solutions() {
           </div>
         </div>
       </section>
-
       <CtaBand />
     </>
   );

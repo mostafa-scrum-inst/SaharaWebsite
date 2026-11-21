@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import Logo from "./Logo";
 import Icon from "./Icon";
-import { company, nav } from "../lib/content";
+import { company, nav, products } from "../lib/content";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -64,6 +64,23 @@ export default function Header() {
                   >
                     {item.label}
                   </Link>
+                  {item.mega ? (
+                    <div className="nav-sub nav-mega">
+                      {Object.entries(products).map(([id, g]) => (
+                        <div key={id}>
+                          <Link href={`/products/#${id}`} className="mega-title">
+                            {g.title}
+                          </Link>
+                          <span className="mega-brands">{g.brands.join(" · ")}</span>
+                          {g.families.map((f) => (
+                            <Link key={f.slug} href={`/products/${f.slug}/`}>
+                              {f.name}
+                            </Link>
+                          ))}
+                        </div>
+                      ))}
+                    </div>
+                  ) : null}
                   {item.children ? (
                     <div className="nav-sub">
                       {item.children.map((c) => (
@@ -76,6 +93,10 @@ export default function Header() {
                 </div>
               );
             })}
+            <Link href="/search/" className="nav-link nav-search" aria-label="Search the site">
+              <Icon name="search" size={20} />
+              <span className="mobile-only"> Search</span>
+            </Link>
             <Link href="/contact/#quote" className="btn btn--accent btn--mobile-only">
               Request a quote
             </Link>
