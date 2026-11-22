@@ -20,11 +20,11 @@ The site ships with a theme switcher (bottom-left) for the three directions:
 
 You can also link straight to one: `?theme=a`, `?theme=b` or `?theme=c`. The choice is remembered per browser.
 
-All colours, fonts, corner radii and heading styles are CSS variables in `app/globals.css` under `[data-theme="..."]`. To launch with one direction: set `DEFAULT_THEME` and `SHOW_SWITCHER = false` in `lib/themes.js`, delete the other two theme blocks, and trim the font URL in `app/layout.jsx`.
+All colours, fonts, corner radii and heading styles are CSS variables in `app/globals.css` under `[data-theme="..."]`. Text and button colours are tuned to pass WCAG AA contrast in each theme. Only the active theme's fonts are downloaded. To launch with one direction: set `DEFAULT_THEME` and `SHOW_SWITCHER = false` in `lib/themes.js` and delete the other two theme blocks.
 
 ## Editing content
 
-Everything visitors read is in `lib/content.js`. Optional sections appear automatically once filled in:
+Everything visitors read is in `lib/content.js`. Each product family there gets its own page at `/products/<slug>/`, appears in the Products mega-menu, the sitemap and site search. Optional sections appear automatically once filled in:
 `testimonials`, `caseStudies` (Projects page), `courseDates` (Training calendar), `downloads` (PDFs in `public/downloads/`) and `careers.roles`.
 
 ## Local development

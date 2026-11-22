@@ -27,7 +27,7 @@ export default function Industries() {
               <Icon name={ind.icon} className="industry-art" />
               <div className="industry-body">
                 <span className="num">0{i + 1}</span>
-                <h3>{ind.title}</h3>
+                <h2 className="h3">{ind.title}</h2>
                 <p>{ind.text}</p>
                 <p style={{ marginTop: 12, fontSize: "0.88rem" }}>Clients include {ind.examples.join(", ")}</p>
               </div>

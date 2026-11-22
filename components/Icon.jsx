@@ -71,6 +71,12 @@ const paths = {
     </>
   ),
   download: <path d="M12 3v12m0 0-4-4m4 4 4-4M4 17v3h16v-3" />,
+  search: (
+    <>
+      <circle cx="11" cy="11" r="7" />
+      <path d="m20 20-4-4" />
+    </>
+  ),
   menu: <path d="M4 7h16M4 12h16M4 17h16" />,
   close: <path d="M6 6l12 12M18 6 6 18" />,
   chat: (

@@ -5,13 +5,9 @@ import Floating from "../components/Floating";
 import ThemeSwitcher from "../components/ThemeSwitcher";
 import Analytics from "../components/Analytics";
 import JsonLd from "../components/JsonLd";
-import { DEFAULT_THEME, SHOW_SWITCHER, themeBootScript } from "../lib/themes";
+import { DEFAULT_THEME, SHOW_SWITCHER, THEMES, themeBootScript } from "../lib/themes";
+import Motion from "../components/Motion";
 import { SITE_URL, organizationLd } from "../lib/site";
-
-// All three directions' fonts load while the switcher is on. Once a direction
-// is chosen, keep only its families here (or self-host them with next/font).
-const FONTS =
-  "https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600&family=Archivo:wght@600;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Sora:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap";
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -32,7 +28,11 @@ export default function RootLayout({ children }) {
         <script dangerouslySetInnerHTML={{ __html: themeBootScript }} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link rel="stylesheet" href={FONTS} />
+        <noscript>
+          <link rel="stylesheet" href={THEMES.find((t) => t.id === DEFAULT_THEME).fonts} />
+        </noscript>
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
+        <meta name="format-detection" content="telephone=no" />
         <JsonLd data={organizationLd} />
       </head>
       <body>
@@ -45,6 +45,7 @@ export default function RootLayout({ children }) {
         <Floating />
         {SHOW_SWITCHER ? <ThemeSwitcher /> : null}
         <Analytics />
+        <Motion />
       </body>
     </html>
   );

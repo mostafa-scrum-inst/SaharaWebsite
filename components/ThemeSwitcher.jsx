@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { DEFAULT_THEME, STORAGE_KEY, THEMES } from "../lib/themes";
+import { DEFAULT_THEME, STORAGE_KEY, THEMES, loadThemeFonts } from "../lib/themes";
 
 export default function ThemeSwitcher() {
   const [theme, setTheme] = useState(DEFAULT_THEME);
@@ -13,6 +13,7 @@ export default function ThemeSwitcher() {
 
   const choose = (id) => {
     setTheme(id);
+    loadThemeFonts(id);
     document.documentElement.setAttribute("data-theme", id);
     try {
       localStorage.setItem(STORAGE_KEY, id);
