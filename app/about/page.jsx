@@ -7,7 +7,7 @@ import { meta } from "../../lib/site";
 export const metadata = meta({
   title: "About Us",
   description:
-    "Sahara Group: 30+ years as a distributor and service provider for measuring, testing, automation and commissioning across North Africa and Europe.",
+    "Sahara Group: founded in 1999, with 37 years of experience as a distributor and service provider for measuring, testing, automation and commissioning across North Africa and Europe.",
   path: "/about/",
 });
 
@@ -16,7 +16,7 @@ export default function About() {
     <>
       <PageHero
         eyebrow="About us"
-        title="Three decades of measuring, testing and automation"
+        title="37 years of measuring, testing and automation"
         intro="A strategic solutions provider for power stations, substations and oil & gas facilities, based in Cairo and Bratislava."
         crumbs={[{ label: "About us" }]}
       />

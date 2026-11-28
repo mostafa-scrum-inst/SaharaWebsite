@@ -19,7 +19,7 @@ export const metadata = {
     "Sahara Group supplies and services OMICRON, Rockwell Automation, Schneider Electric and DILO equipment, with testing, commissioning and certified training from Cairo and Bratislava.",
 };
 
-export const viewport = { themeColor: "#0D2440", width: "device-width", initialScale: 1 };
+export const viewport = { themeColor: "#141762", width: "device-width", initialScale: 1 };
 
 export default function RootLayout({ children }) {
   return (

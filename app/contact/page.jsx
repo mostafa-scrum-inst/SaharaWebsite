@@ -48,8 +48,6 @@ export default function Contact() {
                   <dd>
                     <a href={`mailto:${o.email}`}>{o.email}</a>
                   </dd>
-                  <dt>Hours</dt>
-                  <dd>{o.hours}</dd>
                 </dl>
                 <MapEmbed query={o.mapQuery} label={o.city} />
               </div>
