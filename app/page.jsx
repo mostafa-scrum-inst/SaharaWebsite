@@ -27,12 +27,12 @@ export default function Home() {
             <h1>Testing, automation and commissioning for power and oil &amp; gas</h1>
             <p>
               <span className="only-desktop">
-                For more than 30 years we have supplied equipment from OMICRON, Rockwell Automation,
+                With 37 years of experience, we supply equipment from OMICRON, Rockwell Automation,
                 Schneider Electric and DILO, and the engineers who test, commission and train on it,
                 from Cairo and Bratislava.
               </span>
               <span className="only-mobile">
-                30+ years of test equipment, automation and the engineers behind them.
+                37 years of test equipment, automation and the engineers behind them.
               </span>
             </p>
             <div className="hero-actions">
@@ -88,7 +88,7 @@ export default function Home() {
           <div className="media-wrap">
             <Media kind="engineer" caption="Sahara engineers on site" tall />
             <div className="media-tag">
-              <strong>30+</strong>years in the field
+              <strong>37</strong>years of experience
             </div>
           </div>
           <div>

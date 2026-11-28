@@ -12,11 +12,13 @@ Redesign of [saharagroup.org](http://www.saharagroup.org/) as a static Next.js s
 
 The site ships with a theme switcher (bottom-left) for the three directions:
 
-| | Direction | Palette | Fonts |
+All three use the Sahara logo colours, blue `#141762` and yellow `#FFDE05`, and differ in type, shape and texture:
+
+| | Direction | Feel | Fonts |
 |---|---|---|---|
-| A | Desert Power | navy `#0D2440` + amber `#E9A23B` | Barlow Condensed + Inter |
-| B | Grid Voltage | graphite `#121820` + blue `#1E9BE0` + yellow `#F5C518` | Archivo + IBM Plex Sans/Mono |
-| C | Nile Industrial | teal `#0F3B3C` + copper `#C8662A` | Sora + Source Sans 3 |
+| A | Bold Industrial | Uppercase condensed headings, sharp corners, yellow diagonal in the hero | Barlow Condensed + Inter |
+| B | Technical Grid | Darkest blue, square corners, schematic grid in the hero, mono model numbers | Archivo + IBM Plex Sans/Mono |
+| C | Soft Corporate | Sentence-case headings, rounded corners, soft yellow glow | Sora + Source Sans 3 |
 
 You can also link straight to one: `?theme=a`, `?theme=b` or `?theme=c`. The choice is remembered per browser.
 

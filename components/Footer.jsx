@@ -13,7 +13,7 @@ export default function Footer() {
           <Logo />
           <p>
             Measuring, testing, automation and commissioning for power and oil &amp; gas,
-            for more than 30 years, from Cairo and Bratislava.
+            since 1999, from Cairo and Bratislava.
           </p>
           <p>
             <strong style={{ color: "var(--c-on-dark)" }}>OMICRON Certified Training Partner</strong>

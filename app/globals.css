@@ -3,29 +3,35 @@
    direction is swapped by changing <html data-theme="...">.
    ========================================================================== */
 
+/* All three directions use the Sahara logo colours: blue #141762 and
+   yellow #FFDE05. They differ in type, shape, texture and how strongly the
+   yellow is used. Yellow is never used for text on light backgrounds (too
+   little contrast); there, blue carries text and icons. */
+
 :root,
 [data-theme="desert"] {
-  /* A · Desert Power */
-  --c-primary: #0d2440;
-  --c-primary-2: #13325a;
-  --c-accent: #e9a23b;
-  --c-accent-hover: #f2b65e;
-  --c-on-accent: #17212b;
-  --c-btn: #e9a23b;
-  --c-btn-hover: #f2b65e;
-  --c-stat: #b06e12;
-  --c-accent-on-dark: #e9a23b;
-  --c-secondary: #2b6ca3;
-  --c-highlight: #e9a23b;
-  --c-bg: #f4f6f8;
+  /* A · Bold Industrial */
+  --c-primary: #141762;
+  --c-primary-2: #1d2185;
+  --c-accent: #ffde05;
+  --c-accent-hover: #ffe84d;
+  --c-on-accent: #141762;
+  --c-btn: #ffde05;
+  --c-btn-hover: #ffe84d;
+  --c-stat: #141762;
+  --c-mark: #141762;
+  --c-accent-on-dark: #ffde05;
+  --c-secondary: #2b30a6;
+  --c-highlight: #ffde05;
+  --c-bg: #f5f6fa;
   --c-surface: #ffffff;
-  --c-alt: #e9edf2;
-  --c-text: #17212b;
-  --c-muted: #53606d;
-  --c-border: #d6dde5;
-  --c-footer: #08182b;
+  --c-alt: #eceef7;
+  --c-text: #12142e;
+  --c-muted: #50536d;
+  --c-border: #d8dbec;
+  --c-footer: #0c0e44;
   --c-on-dark: #ffffff;
-  --c-on-dark-muted: #b8c4d3;
+  --c-on-dark-muted: #c3c6e6;
 
   --font-head: "Barlow Condensed", "Arial Narrow", sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
@@ -39,33 +45,35 @@
   --radius-lg: 2px;
 
   --hero-texture:
-    linear-gradient(115deg, rgba(233, 162, 59, 0.16) 0 18%, transparent 18% 100%),
+    linear-gradient(115deg, transparent 0 88%, #ffde05 88% 88.8%, transparent 88.8% 100%),
+    linear-gradient(115deg, transparent 0 88.8%, rgba(255, 255, 255, 0.05) 88.8% 100%),
     repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.035) 0 2px, transparent 2px 18px),
-    linear-gradient(180deg, #0d2440 0%, #0a1d35 100%);
+    linear-gradient(180deg, #141762 0%, #0f1250 100%);
 }
 
 [data-theme="grid"] {
-  /* B · Grid Voltage */
-  --c-primary: #121820;
-  --c-primary-2: #1b2430;
-  --c-accent: #1e9be0;
-  --c-accent-hover: #4bb2ea;
-  --c-on-accent: #0b1015;
-  --c-btn: #1e9be0;
-  --c-btn-hover: #4bb2ea;
-  --c-stat: #121820;
-  --c-accent-on-dark: #f5c518;
-  --c-secondary: #0e6aa3;
-  --c-highlight: #f5c518;
+  /* B · Technical Grid */
+  --c-primary: #0d0f45;
+  --c-primary-2: #161a63;
+  --c-accent: #ffde05;
+  --c-accent-hover: #ffe84d;
+  --c-on-accent: #0d0f45;
+  --c-btn: #ffde05;
+  --c-btn-hover: #ffe84d;
+  --c-stat: #141762;
+  --c-mark: #141762;
+  --c-accent-on-dark: #ffde05;
+  --c-secondary: #141762;
+  --c-highlight: #ffde05;
   --c-bg: #ffffff;
   --c-surface: #ffffff;
-  --c-alt: #f1f4f7;
-  --c-text: #121820;
-  --c-muted: #56616d;
-  --c-border: #dde3ea;
-  --c-footer: #0b1015;
+  --c-alt: #f1f2f8;
+  --c-text: #0d0f2a;
+  --c-muted: #535670;
+  --c-border: #dfe1ee;
+  --c-footer: #080a30;
   --c-on-dark: #ffffff;
-  --c-on-dark-muted: #a9b3be;
+  --c-on-dark-muted: #b4b7d8;
 
   --font-head: "Archivo", system-ui, sans-serif;
   --font-body: "IBM Plex Sans", system-ui, sans-serif;
@@ -79,34 +87,35 @@
   --radius-lg: 0px;
 
   --hero-texture:
-    linear-gradient(rgba(30, 155, 224, 0.09) 1px, transparent 1px) 0 0 / 32px 32px,
-    linear-gradient(90deg, rgba(30, 155, 224, 0.09) 1px, transparent 1px) 0 0 / 32px 32px,
-    radial-gradient(ellipse at 80% 20%, rgba(30, 155, 224, 0.22), transparent 55%),
-    #121820;
+    linear-gradient(rgba(255, 222, 5, 0.07) 1px, transparent 1px) 0 0 / 32px 32px,
+    linear-gradient(90deg, rgba(255, 222, 5, 0.07) 1px, transparent 1px) 0 0 / 32px 32px,
+    radial-gradient(ellipse at 80% 20%, rgba(43, 48, 166, 0.55), transparent 55%),
+    #0d0f45;
 }
 
 [data-theme="nile"] {
-  /* C · Nile Industrial */
-  --c-primary: #0f3b3c;
-  --c-primary-2: #164b4c;
-  --c-accent: #c8662a;
-  --c-accent-hover: #b35920;
-  --c-on-accent: #ffffff;
-  --c-btn: #ad5520;
-  --c-btn-hover: #96481a;
-  --c-stat: #ad5520;
-  --c-accent-on-dark: #e8a070;
-  --c-secondary: #2f6f60;
-  --c-highlight: #e08a50;
-  --c-bg: #f3f6f5;
+  /* C · Soft Corporate */
+  --c-primary: #141762;
+  --c-primary-2: #232894;
+  --c-accent: #ffde05;
+  --c-accent-hover: #ffe84d;
+  --c-on-accent: #141762;
+  --c-btn: #ffde05;
+  --c-btn-hover: #ffe84d;
+  --c-stat: #141762;
+  --c-mark: #3a3fbf;
+  --c-accent-on-dark: #ffde05;
+  --c-secondary: #3a3fbf;
+  --c-highlight: #ffde05;
+  --c-bg: #f6f6fb;
   --c-surface: #ffffff;
-  --c-alt: #e6eeec;
-  --c-text: #172423;
-  --c-muted: #4f5f5d;
-  --c-border: #d3dfdc;
-  --c-footer: #0a2a2b;
+  --c-alt: #eeeff9;
+  --c-text: #161833;
+  --c-muted: #535670;
+  --c-border: #dcdef0;
+  --c-footer: #0e1050;
   --c-on-dark: #ffffff;
-  --c-on-dark-muted: #b3c9c6;
+  --c-on-dark-muted: #c6c8ea;
 
   --font-head: "Sora", system-ui, sans-serif;
   --font-body: "Source Sans 3", system-ui, sans-serif;
@@ -120,9 +129,9 @@
   --radius-lg: 18px;
 
   --hero-texture:
-    radial-gradient(circle at 85% 15%, rgba(200, 102, 42, 0.28), transparent 45%),
-    radial-gradient(circle at 10% 90%, rgba(63, 138, 120, 0.35), transparent 50%),
-    linear-gradient(160deg, #0f3b3c 0%, #0a2a2b 100%);
+    radial-gradient(circle at 85% 15%, rgba(255, 222, 5, 0.12), transparent 40%),
+    radial-gradient(circle at 10% 90%, rgba(58, 63, 191, 0.45), transparent 50%),
+    linear-gradient(160deg, #141762 0%, #0e1050 100%);
 }
 
 /* ==========================================================================
@@ -186,8 +195,18 @@ p {
 }
 
 :focus-visible {
-  outline: 3px solid var(--c-accent);
+  outline: 3px solid var(--c-mark);
   outline-offset: 2px;
+}
+.topbar :focus-visible,
+.header :focus-visible,
+.hero :focus-visible,
+.page-hero :focus-visible,
+.cta :focus-visible,
+.footer :focus-visible,
+.mobile-bar :focus-visible,
+.industry :focus-visible {
+  outline-color: var(--c-accent);
 }
 
 .skip-link {
@@ -244,7 +263,7 @@ p {
 .eyebrow::before {
   content: "";
   width: 28px;
-  height: 3px;
+  height: 4px;
   background: var(--c-accent);
   border-radius: var(--radius);
 }
@@ -775,7 +794,7 @@ p {
 }
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 18px 40px rgba(13, 36, 64, 0.1);
+  box-shadow: 0 18px 40px rgba(20, 23, 98, 0.12);
   border-color: transparent;
 }
 [data-theme="desert"] .card {
@@ -807,7 +826,7 @@ p {
 }
 [data-theme="nile"] .card-icon {
   border-radius: 50%;
-  background: rgba(63, 138, 120, 0.14);
+  background: rgba(58, 63, 191, 0.12);
 }
 .card-icon svg {
   width: 28px;
@@ -836,8 +855,8 @@ p {
   top: 0.45em;
   width: 1rem;
   height: 0.6rem;
-  border-left: 3px solid var(--c-accent);
-  border-bottom: 3px solid var(--c-accent);
+  border-left: 3px solid var(--c-mark);
+  border-bottom: 3px solid var(--c-mark);
   transform: rotate(-45deg);
 }
 
@@ -1152,7 +1171,7 @@ p {
 .seal {
   width: 120px;
   height: 120px;
-  color: var(--c-accent);
+  color: var(--c-mark);
 }
 @media (max-width: 600px) {
   .credential {

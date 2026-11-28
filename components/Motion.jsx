@@ -40,7 +40,7 @@ export default function Motion() {
           count.unobserve(e.target);
           const el = e.target;
           const m = el.textContent.match(/^(\d+)(.*)$/);
-          if (!m) return;
+          if (!m || Number(m[1]) >= 1000) return; // years stay as-is
           const end = Number(m[1]);
           const suffix = m[2];
           const t0 = performance.now();
